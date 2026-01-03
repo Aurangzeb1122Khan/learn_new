@@ -51,7 +51,7 @@ model, le_category, le_payment = load_model()
 @st.cache_data
 def load_data():
     try:
-        df = pd.read_csv('/content/restaurant_sales_cleaned.csv')
+        df = pd.read_csv('restaurant_sales_cleaned.csv')
         df['order_date'] = pd.to_datetime(df['order_date'])
         return df
     except:
